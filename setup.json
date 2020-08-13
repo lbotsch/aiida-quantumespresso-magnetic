@@ -1,0 +1,59 @@
+{
+    "name": "aiida-quantumespresso-magnetic",
+    "author": "Lukas Botsch",
+    "author_email": "lukas.botsch@gmail.com",
+    "description": "Extends the aiida-quantumespresso plugin by adding functionality to calculate magnetic systems.",
+    "url": "https://github.com/lbotsch/aiida-quantumespresso-magnetic",
+    "license": "MIT",
+    "classifiers": [
+        "Programming Language :: Python",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
+        "Natural Language :: English",
+        "Framework :: AiiDA"
+    ],
+    "version": "0.1.0a0",
+    "entry_points": {
+        "aiida.data": [
+            "quantumespresso_magnetic = aiida_quantumespresso_magnetic.data:DiffParameters"
+        ],
+        "aiida.calculations": [
+            "quantumespresso_magnetic = aiida_quantumespresso_magnetic.calculations:DiffCalculation"
+        ],
+        "aiida.parsers": [
+            "quantumespresso_magnetic = aiida_quantumespresso_magnetic.parsers:DiffParser"
+        ],
+        "aiida.cmdline.data": [
+            "quantumespresso_magnetic = aiida_quantumespresso_magnetic.cli:data_cli"
+        ]
+    },
+    "include_package_data": true,
+    "setup_requires": ["reentry"],
+    "reentry_register": true,
+    "install_requires": [
+        "aiida-core>=1.1.0,<2.0.0",
+        "six",
+        "voluptuous"
+    ],
+    "extras_require": {
+        "testing": [
+            "pgtest~=1.3.1",
+            "wheel~=0.31",
+            "coverage",
+            "pytest~=3.6,<5.0.0",
+            "pytest-cov"
+        ],
+        "pre-commit": [
+            "astroid==2.2.5",
+            "pre-commit==1.20.0",
+            "prospector==1.1.7",
+            "pylint==2.3.1"
+        ],
+        "docs": [
+            "sphinx",
+            "sphinxcontrib-contentui",
+            "sphinxcontrib-details-directive; python_version>='3.0'",
+            "sphinx-rtd-theme"
+        ]
+    }
+}
