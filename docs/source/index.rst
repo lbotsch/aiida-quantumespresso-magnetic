@@ -3,7 +3,7 @@
     :align: center
 
 The aiida-quantumespresso-magnetic plugin for `AiiDA`_
-=====================================================
+======================================================
 
 ``aiida-quantumespresso-magnetic`` is available at http://github.com/lbotsch/aiida-quantumespresso-magnetic
 
