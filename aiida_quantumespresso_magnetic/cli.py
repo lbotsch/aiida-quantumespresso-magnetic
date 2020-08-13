@@ -17,7 +17,6 @@ from aiida.cmdline.params.types import DataParamType
 @verdi_data.group('quantumespresso_magnetic')
 def data_cli():
     """Command line interface for aiida-quantumespresso-magnetic"""
-    pass
 
 
 @data_cli.command('list')
